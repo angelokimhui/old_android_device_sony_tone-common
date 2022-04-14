@@ -427,8 +427,6 @@ on boot
     chown wifi wifi /sys/module/bcmdhd/parameters/firmware_path
 
 on property:sys.boot_completed=1
-    # Enable ZRAM on boot_complete
-    swapon_all /vendor/etc/fstab.qcom
 
     # end boot time fs tune
     write /sys/block/sda/queue/read_ahead_kb 128
